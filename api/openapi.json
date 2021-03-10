@@ -407,7 +407,8 @@
 						"name": "deviceId",
 						"in": "path",
 						"description": "ID of device to return",
-						"required": true
+						"required": true,
+						"schema": {}
 					}
 				],
 				"responses": {
@@ -427,8 +428,7 @@
 													"timestamp": 1615247999,
 													"network": {
 														"type": "https://schema.linc.world/en/nt/wifi",
-														"rssi": -48,
-														"lastSeen": 1615285653
+														"rssi": -48
 													}
 												}
 											],
@@ -475,7 +475,8 @@
 						"name": "deviceId",
 						"in": "path",
 						"description": "ID of device to return",
-						"required": true
+						"required": true,
+						"schema": {}
 					}
 				],
 				"responses": {
@@ -559,13 +560,15 @@
 						"name": "deviceId",
 						"in": "path",
 						"description": "ID of device to return",
-						"required": true
+						"required": true,
+						"schema": {}
 					},
 					{
 						"name": "lineId",
 						"in": "path",
 						"description": "ID of Voltage line to return",
-						"required": true
+						"required": true,
+						"schema": {}
 					}
 				],
 				"responses": {
@@ -653,7 +656,8 @@
 						"name": "deviceId",
 						"in": "path",
 						"description": "ID of device to return",
-						"required": true
+						"required": true,
+						"schema": {}
 					}
 				],
 				"responses": {
@@ -925,13 +929,15 @@
 						"name": "deviceId",
 						"in": "path",
 						"description": "ID of device to return",
-						"required": true
+						"required": true,
+						"schema": {}
 					},
 					{
 						"name": "channelId",
 						"in": "path",
 						"description": "ID of channel to return",
-						"required": true
+						"required": true,
+						"schema": {}
 					}
 				],
 				"responses": {
