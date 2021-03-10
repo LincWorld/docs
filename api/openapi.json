@@ -980,7 +980,8 @@
 													"value": {
 														 "id": 15,
 														 "sensor": {
-															  "type": "https://schema.linc.world/en/st/ac/ct"
+															  "type": "https://schema.linc.world/en/st/ac/ct",
+															  "model": "https://schema.linc.world/en/sm/ct/1"
 														 },
 														 "data": [
 															  {
