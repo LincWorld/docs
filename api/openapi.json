@@ -1,1104 +1,1071 @@
 {
 	"openapi": "3.0.1",
 	"info": {
-		 "title": "Linc Tools",
-		 "description": "",
-		 "termsOfService": "https://docs.linc.world/terms/",
-		 "contact": {
-			  "name": "Afzaal",
-			  "email": "afzaal@linc.world"
-		 },
-		 "license": {
-			  "name": ""
-		 },
-		 "version": "2.0.0",
-		 "x-logo": {
-			  "url": ""
-		 }
+		"title": "Linc Tools",
+		"description": "",
+		"termsOfService": "https://docs.linc.world/terms/",
+		"contact": {
+			"name": "Afzaal",
+			"email": "afzaal@linc.world"
+		},
+		"license": {
+			"name": ""
+		},
+		"version": "2.0.0",
+		"x-logo": {
+			"url": ""
+		}
 	},
 	"externalDocs": {
-		 "description": "",
-		 "url": "https://www.linc.world"
+		"description": "",
+		"url": "https://www.linc.world"
 	},
 	"servers": [
-		 {
-			  "url": "https://api.linc.world/v2/tools"
-		 }
+		{
+			"url": "https://api.linc.world/v2/tools"
+		}
 	],
 	"tags": [
-		 {
-			  "name": "device",
-			  "description": "",
-			  "externalDocs": {
-					"description": "Find out more",
-					"url": "https://docs.linc.world"
-			  },
-			  "x-last-modified": 1615282587291
-		 },
-		 {
-			  "name": "voltage",
-			  "description": "",
-			  "externalDocs": {
-					"url": ""
-			  },
-			  "x-last-modified": 1615282600718
-		 },
-		 {
-			  "name": "channel",
-			  "description": "",
-			  "externalDocs": {
-					"description": "",
-					"url": ""
-			  },
-			  "x-last-modified": 1615282613258
-		 }
+		{
+			"name": "device",
+			"description": "",
+			"externalDocs": {
+				"description": "Find out more",
+				"url": "https://docs.linc.world"
+			},
+			"x-last-modified": 1615282587291
+		},
+		{
+			"name": "voltage",
+			"description": "",
+			"externalDocs": {
+				"url": ""
+			},
+			"x-last-modified": 1615282600718
+		},
+		{
+			"name": "channel",
+			"description": "",
+			"externalDocs": {
+				"description": "",
+				"url": ""
+			},
+			"x-last-modified": 1615282613258
+		}
 	],
 	"paths": {
-		 "/devices": {
-			  "get": {
-					"tags": [
-						 "device"
-					],
-					"responses": {
-						 "200": {
-							  "description": "List of devices",
-							  "schema": {
-								"type": "object",
-								"properties":{
-									"devices":{
-										"type": "array",
-										"items":{
-											"$ref": "https://schema.linc.world/draft-01/Device.json"
+		"/devices": {
+			"get": {
+				"tags": [
+					"device"
+				],
+				"responses": {
+					"200": {
+						"description": "List of devices",
+						"content": {
+							"application/json": {
+								"examples": {
+									"Example": {
+										"value": {
+											"devices": [
+												{
+													"id": "VF",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VF"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VF/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VF/voltages"
+														}
+													}
+												},
+												{
+													"id": "VG",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VG"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VG/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VG/voltages"
+														}
+													}
+												},
+												{
+													"id": "VH",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VH"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VH/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VH/voltages"
+														}
+													}
+												},
+												{
+													"id": "VJ",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VJ"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VJ/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VJ/voltages"
+														}
+													}
+												},
+												{
+													"id": "VK",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VK"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VK/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VK/voltages"
+														}
+													}
+												},
+												{
+													"id": "VL",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VL"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VL/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VL/voltages"
+														}
+													}
+												},
+												{
+													"id": "VM",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VM"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VM/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VM/voltages"
+														}
+													}
+												},
+												{
+													"id": "VN",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VN"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VN/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VN/voltages"
+														}
+													}
+												},
+												{
+													"id": "VP",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VP"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VP/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VP/voltages"
+														}
+													}
+												},
+												{
+													"id": "VQ",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VQ"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VQ/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VQ/voltages"
+														}
+													}
+												},
+												{
+													"id": "VR",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VR"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VR/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VR/voltages"
+														}
+													}
+												},
+												{
+													"id": "VS",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VS"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VS/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VS/voltages"
+														}
+													}
+												},
+												{
+													"id": "VT",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VT"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VT/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VT/voltages"
+														}
+													}
+												},
+												{
+													"id": "VU",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VU"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VU/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VU/voltages"
+														}
+													}
+												},
+												{
+													"id": "VV",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VV"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VV/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VV/voltages"
+														}
+													}
+												},
+												{
+													"id": "VW",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VW"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VW/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VW/voltages"
+														}
+													}
+												},
+												{
+													"id": "VX",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VX"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VX/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VX/voltages"
+														}
+													}
+												},
+												{
+													"id": "VY",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VY"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VY/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VY/voltages"
+														}
+													}
+												},
+												{
+													"id": "VZ",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/VZ"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/VZ/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/VZ/voltages"
+														}
+													}
+												},
+												{
+													"id": "W0",
+													"metadata": {},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/W0"
+														},
+														"channels": {
+															"href": "https://api.linc.world/v2/tools/devices/W0/channels"
+														},
+														"voltages": {
+															"href": "https://api.linc.world/v2/tools/devices/W0/voltages"
+														}
+													}
+												}
+											],
+											"_links": {
+												"self": {
+													"href": "https://api.linc.world/v2/devices"
+												},
+												"next": {
+													"href": "https://api.linc.world/v2/devices?page=2"
+												},
+												"last": {
+													"href": "https://api.linc.world/v2/devices?page=8"
+												}
+											}
 										}
 									}
 								}
-						   	  },
-							  "content": {
-									"application/json": {
-										 "examples": {
-											  "Example": {
-													"value": {
-														 "devices": [
-															  {
-																	"id": "VF",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VF"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VF/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VF/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VG",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VG"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VG/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VG/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VH",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VH"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VH/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VH/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VJ",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VJ"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VJ/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VJ/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VK",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VK"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VK/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VK/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VL",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VL"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VL/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VL/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VM",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VM"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VM/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VM/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VN",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VN"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VN/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VN/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VP",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VP"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VP/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VP/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VQ",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VQ"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VQ/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VQ/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VR",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VR"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VR/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VR/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VS",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VS"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VS/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VS/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VT",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VT"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VT/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VT/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VU",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VU"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VU/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VU/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VV",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VV"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VV/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VV/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VW",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VW"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VW/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VW/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VX",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VX"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VX/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VX/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VY",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VY"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VY/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VY/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "VZ",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VZ"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VZ/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/VZ/voltages"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "W0",
-																	"metadata": {},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/W0"
-																		 },
-																		 "channels": {
-																			  "href": "https://api.linc.world/v2/tools/devices/W0/channels"
-																		 },
-																		 "voltages": {
-																			  "href": "https://api.linc.world/v2/tools/devices/W0/voltages"
-																		 }
-																	}
-															  }
-														 ],
-														 "_links": {
-															  "self": {
-																	"href": "https://api.linc.world/v2/devices"
-															  },
-															  "next": {
-																	"href": "https://api.linc.world/v2/devices?page=2"
-															  },
-															  "last": {
-																	"href": "https://api.linc.world/v2/devices?page=8"
-															  }
-														 }
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"Bearer": [
+							"read:devices"
+						]
+					}
+				]
+			},
+			"x-last-modified": 1615285129297
+		},
+		"/devices/{deviceId}": {
+			"get": {
+				"tags": [
+					"device"
+				],
+				"parameters": [
+					{
+						"name": "deviceId",
+						"in": "path",
+						"description": "ID of device to return",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of a device",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "https://schema.linc.world/draft-01/Device.json"
+								},
+								"examples": {
+									"Example": {
+										"value": {
+											"id": "ZQ",
+											"data": [
+												{
+													"timestamp": 1615247999,
+													"network": {
+														"type": "https://schema.linc.world/en/nt/wifi",
+														"rssi": -48,
+														"lastSeen": 1615285653
 													}
-											  }
-										 }
-									}
-							  }
-						 }
-					},
-					"security": [
-						 {
-							  "Bearer": [
-									"read:devices"
-							  ]
-						 }
-					]
-			  },
-			  "x-last-modified": 1615285129297
-		 },
-		 "/devices/{deviceId}": {
-			  "get": {
-					"tags": [
-						 "device"
-					],
-					"parameters": [
-						 {
-							  "name": "deviceId",
-							  "in": "path",
-							  "description": "ID of device to return",
-							  "required": true
-						 }
-					],
-					"responses": {
-						 "200": {
-							  "description": "Details of a device",
-							  "content": {
-									"application/json": {
-										 "schema": {
-											  "$ref": "https://schema.linc.world/draft-01/Device.json"
-										 },
-										 "examples": {
-											  "Example": {
-													"value": {
-														 "id": "ZQ",
-														 "data": [
-															  {
-																	"timestamp": 1615247999,
-																	"network": {
-																		 "type": "https://schema.linc.world/en/nt/wifi",
-																		 "rssi": -48,
-																		 "lastSeen": 1615285653
-																	}
-															  }
-														 ],
-														 "metadata": {
-															  "name": "ZQ"
-														 },
-														 "_links": {
-															  "self": {
-																	"href": "https://api.linc.world/v2/tools/devices/ZQ"
-															  },
-															  "channels": {
-																	"href": "https://api.linc.world/v2/tools/devices/ZQ/channels"
-															  },
-															  "voltages": {
-																	"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages"
-															  }
-														 }
-													}
-											  }
-										 }
-									}
-							  }
-						 }
-					},
-					"security": [
-						 {
-							  "Bearer": [
-									"read:devices",
-									"read:devices/{DEVICEID}"
-							  ]
-						 }
-					]
-			  },
-			  "x-last-modified": 1615285147152
-		 },
-		 "/devices/{deviceId}/voltages": {
-			  "get": {
-					"tags": [
-						 "voltage",
-						 "device"
-					],
-					"parameters": [
-						 {
-							  "name": "deviceId",
-							  "in": "path",
-							  "description": "ID of device to return",
-							  "required": true
-						 }
-					],
-					"responses": {
-						 "200": {
-							  "description": "List of voltage lines",
-							  "schema": {
-								"type": "object",
-								"properties":{
-									"voltages":{
-										"type": "array",
-										"items":{
-											"$ref": "https://schema.linc.world/draft-01/Voltage.json"
+												}
+											],
+											"metadata": {
+												"name": "ZQ"
+											},
+											"_links": {
+												"self": {
+													"href": "https://api.linc.world/v2/tools/devices/ZQ"
+												},
+												"channels": {
+													"href": "https://api.linc.world/v2/tools/devices/ZQ/channels"
+												},
+												"voltages": {
+													"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages"
+												}
+											}
 										}
 									}
 								}
-						   	  },
-							  "content": {
-									"application/json": {
-										 "examples": {
-											  "Example": {
-													"value": {
-														 "voltages": [
-															  {
-																	"id": "L1",
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L1"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "L2",
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L2"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "L3",
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L3"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  }
-														 ],
-														 "_links": {
-															  "self": {
-																	"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages"
-															  },
-															  "device": {
-																	"href": "https://api.linc.world/v2/tools/devices/ZQ"
-															  }
-														 }
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"Bearer": [
+							"read:devices",
+							"read:devices/{DEVICEID}"
+						]
+					}
+				]
+			},
+			"x-last-modified": 1615285147152
+		},
+		"/devices/{deviceId}/voltages": {
+			"get": {
+				"tags": [
+					"voltage",
+					"device"
+				],
+				"parameters": [
+					{
+						"name": "deviceId",
+						"in": "path",
+						"description": "ID of device to return",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "List of voltage lines",
+						"content": {
+							"application/json": {
+								"examples": {
+									"Example": {
+										"value": {
+											"voltages": [
+												{
+													"id": "L1",
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L1"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
 													}
-											  }
-										 }
-									}
-							  }
-						 }
-					},
-					"security": [
-						 {
-							  "Bearer": [
-									"read:devices",
-									"read:devices/{DEVICEID}",
-									"read:devices/{DEVICEID}/voltages"
-							  ]
-						 }
-					]
-			  },
-			  "x-last-modified": 1615285159627
-		 },
-		 "/devices/{deviceId}/voltages/{lineId}": {
-			  "get": {
-					"tags": [
-						 "device",
-						 "voltage"
-					],
-					"parameters": [
-						 {
-							  "name": "deviceId",
-							  "in": "path",
-							  "description": "ID of device to return",
-							  "required": true
-						 },
-						 {
-							  "name": "lineId",
-							  "in": "path",
-							  "description": "ID of Voltage line to return",
-							  "required": true
-						 }
-					],
-					"responses": {
-						 "200": {
-							  "description": "Details of a Voltage line",
-							  "content": {
-									"application/json": {
-										 "schema": {
-											  "$ref": "https://schema.linc.world/draft-01/Voltage.json"
-										 },
-										 "examples": {
-											  "Example": {
-													"value": {
-														 "voltages": [
-															  {
-																	"id": "L1",
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L1"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "L2",
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L2"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": "L3",
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L3"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  }
-														 ],
-														 "_links": {
-															  "self": {
-																	"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages"
-															  },
-															  "device": {
-																	"href": "https://api.linc.world/v2/tools/devices/ZQ"
-															  }
-														 }
+												},
+												{
+													"id": "L2",
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L2"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
 													}
-											  }
-										 }
-									}
-							  }
-						 }
-					},
-					"security": [
-						 {
-							  "Bearer": [
-									"read:devices",
-									"read:devices/{DEVICEID}",
-									"read:devices/{DEVICEID}/voltages",
-									"read:devices/{DEVICEID}/voltages/{LINEID}"
-							  ]
-						 }
-					]
-			  },
-			  "x-last-modified": 1615285175563
-		 },
-		 "/devices/{deviceId}/channels": {
-			  "get": {
-					"tags": [
-						 "device",
-						 "channel"
-					],
-					"parameters": [
-						 {
-							  "name": "deviceId",
-							  "in": "path",
-							  "description": "ID of device to return",
-							  "required": true
-						 }
-					],
-					"responses": {
-						 "200": {
-							  "description": "List of channels",
-							  "schema": {
-								"type": "object",
-								"properties":{
-									"channels":{
-										"type": "array",
-										"items":{
-											"$ref": "https://schema.linc.world/draft-01/Channel.json"
+												},
+												{
+													"id": "L3",
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L3"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												}
+											],
+											"_links": {
+												"self": {
+													"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages"
+												},
+												"device": {
+													"href": "https://api.linc.world/v2/tools/devices/ZQ"
+												}
+											}
 										}
 									}
 								}
-						   	  },
-							  "content": {
-									"application/json": {
-										 "examples": {
-											  "Example": {
-													"value": {
-														 "channels": [
-															  {
-																	"id": 1,
-																	"metadata": {
-																		 "name": "Channel 1"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/1"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 2,
-																	"metadata": {
-																		 "name": "Channel 2"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/2"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 3,
-																	"metadata": {
-																		 "name": "Channel 3"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/3"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 4,
-																	"metadata": {
-																		 "name": "Channel 4"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/4"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 5,
-																	"metadata": {
-																		 "name": "Channel 5"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/5"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 6,
-																	"metadata": {
-																		 "name": "Channel 6"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/6"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 7,
-																	"metadata": {
-																		 "name": "Channel 7"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/7"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 8,
-																	"metadata": {
-																		 "name": "Channel 8"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/8"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 9,
-																	"metadata": {
-																		 "name": "Channel 9"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/9"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 10,
-																	"metadata": {
-																		 "name": "Channel 10"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/10"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 11,
-																	"metadata": {
-																		 "name": "Channel 11"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/11"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 12,
-																	"metadata": {
-																		 "name": "Channel 12"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/12"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 13,
-																	"metadata": {
-																		 "name": "Channel 13"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/13"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 14,
-																	"metadata": {
-																		 "name": "Channel 14"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/14"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 15,
-																	"metadata": {
-																		 "name": "Channel 15"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/15"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  },
-															  {
-																	"id": 16,
-																	"metadata": {
-																		 "name": "Channel 16"
-																	},
-																	"_links": {
-																		 "self": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ/channels/16"
-																		 },
-																		 "device": {
-																			  "href": "https://api.linc.world/v2/tools/devices/ZQ"
-																		 }
-																	}
-															  }
-														 ],
-														 "_links": {
-															  "self": {
-																	"href": "https://api.linc.world/v2/tools/devices/ZQ/channels"
-															  }
-														 }
-													}
-											  }
-										 }
-									}
-							  }
-						 }
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"Bearer": [
+							"read:devices",
+							"read:devices/{DEVICEID}",
+							"read:devices/{DEVICEID}/voltages"
+						]
+					}
+				]
+			},
+			"x-last-modified": 1615285159627
+		},
+		"/devices/{deviceId}/voltages/{lineId}": {
+			"get": {
+				"tags": [
+					"device",
+					"voltage"
+				],
+				"parameters": [
+					{
+						"name": "deviceId",
+						"in": "path",
+						"description": "ID of device to return",
+						"required": true
 					},
-					"security": [
-						 {
-							  "Bearer": [
-									"read:devices",
-									"read:devices/{DEVICEID}",
-									"read:devices/{DEVICEID}/channels"
-							  ]
-						 }
-					]
-			  },
-			  "x-last-modified": 1615285187625
-		 },
-		 "/devices/{deviceId}/channels/{channelId}": {
-			  "get": {
-					"tags": [
-						 "channel",
-						 "device"
-					],
-					"parameters": [
-						 {
-							  "name": "deviceId",
-							  "in": "path",
-							  "description": "ID of device to return",
-							  "required": true
-						 },
-						 {
-							  "name": "channelId",
-							  "in": "path",
-							  "description": "ID of channel to return",
-							  "required": true
-						 }
-					],
-					"responses": {
-						 "200": {
-							  "description": "Details of a Channel",
-							  "content": {
-									"application/json": {
-										 "schema": {
-											  "$ref": "https://schema.linc.world/draft-01/Channel.json"
-										 },
-										 "examples": {
-											  "Example": {
-													"value": {
-														 "id": 15,
-														 "sensor": {
-															  "type": "https://schema.linc.world/en/st/ac/ct",
-															  "model": "https://schema.linc.world/en/sm/ct/1"
-														 },
-														 "data": [
-															  {
-																	"phase": "L1",
-																	"timestamp": 1615247999,
-																	"current": {
-																		 "crest_factor": 2.02,
-																		 "rms": 2542,
-																		 "peak": 5424
-																	},
-																	"energy": {
-																		 "active": 381963461
-																	},
-																	"harmonicValues": [
-																		 {
-																			  "bin": 50,
-																			  "value": 48.98
-																		 },
-																		 {
-																			  "bin": 54,
-																			  "value": 0.35
-																		 },
-																		 {
-																			  "bin": 58,
-																			  "value": 0.35
-																		 },
-																		 {
-																			  "bin": 150,
-																			  "value": 6.38
-																		 },
-																		 {
-																			  "bin": 250,
-																			  "value": 7.44
-																		 },
-																		 {
-																			  "bin": 350,
-																			  "value": 9.3
-																		 },
-																		 {
-																			  "bin": 450,
-																			  "value": 5.93
-																		 },
-																		 {
-																			  "bin": 550,
-																			  "value": 1.77
-																		 }
-																	],
-																	"power": {
-																		 "apparent": 577,
-																		 "real": 514
-																	},
-																	"powerFactor": {
-																		 "truePowerFactor": "0.890"
-																	},
-																	"harmonicDistortion": {
-																		 "totalHarmonicDistortion": "68.90"
-																	}
-															  }
-														 ],
-														 "metadata": {
-															  "name": "Channel 15"
-														 },
-														 "_links": {
-															  "self": {
-																	"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/15"
-															  },
-															  "device": {
-																	"href": "https://api.linc.world/v2/tools/devices/ZQ"
-															  }
-														 }
+					{
+						"name": "lineId",
+						"in": "path",
+						"description": "ID of Voltage line to return",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of a Voltage line",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "https://schema.linc.world/draft-01/Voltage.json"
+								},
+								"examples": {
+									"Example": {
+										"value": {
+											"voltages": [
+												{
+													"id": "L1",
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L1"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
 													}
-											  }
-										 }
+												},
+												{
+													"id": "L2",
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L2"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": "L3",
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages/L3"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												}
+											],
+											"_links": {
+												"self": {
+													"href": "https://api.linc.world/v2/tools/devices/ZQ/voltages"
+												},
+												"device": {
+													"href": "https://api.linc.world/v2/tools/devices/ZQ"
+												}
+											}
+										}
 									}
-							  }
-						 }
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"Bearer": [
+							"read:devices",
+							"read:devices/{DEVICEID}",
+							"read:devices/{DEVICEID}/voltages",
+							"read:devices/{DEVICEID}/voltages/{LINEID}"
+						]
+					}
+				]
+			},
+			"x-last-modified": 1615285175563
+		},
+		"/devices/{deviceId}/channels": {
+			"get": {
+				"tags": [
+					"device",
+					"channel"
+				],
+				"parameters": [
+					{
+						"name": "deviceId",
+						"in": "path",
+						"description": "ID of device to return",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "List of channels",
+						"content": {
+							"application/json": {
+								"examples": {
+									"Example": {
+										"value": {
+											"channels": [
+												{
+													"id": 1,
+													"metadata": {
+														"name": "Channel 1"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/1"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 2,
+													"metadata": {
+														"name": "Channel 2"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/2"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 3,
+													"metadata": {
+														"name": "Channel 3"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/3"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 4,
+													"metadata": {
+														"name": "Channel 4"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/4"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 5,
+													"metadata": {
+														"name": "Channel 5"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/5"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 6,
+													"metadata": {
+														"name": "Channel 6"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/6"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 7,
+													"metadata": {
+														"name": "Channel 7"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/7"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 8,
+													"metadata": {
+														"name": "Channel 8"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/8"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 9,
+													"metadata": {
+														"name": "Channel 9"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/9"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 10,
+													"metadata": {
+														"name": "Channel 10"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/10"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 11,
+													"metadata": {
+														"name": "Channel 11"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/11"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 12,
+													"metadata": {
+														"name": "Channel 12"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/12"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 13,
+													"metadata": {
+														"name": "Channel 13"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/13"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 14,
+													"metadata": {
+														"name": "Channel 14"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/14"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 15,
+													"metadata": {
+														"name": "Channel 15"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/15"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												},
+												{
+													"id": 16,
+													"metadata": {
+														"name": "Channel 16"
+													},
+													"_links": {
+														"self": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/16"
+														},
+														"device": {
+															"href": "https://api.linc.world/v2/tools/devices/ZQ"
+														}
+													}
+												}
+											],
+											"_links": {
+												"self": {
+													"href": "https://api.linc.world/v2/tools/devices/ZQ/channels"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"Bearer": [
+							"read:devices",
+							"read:devices/{DEVICEID}",
+							"read:devices/{DEVICEID}/channels"
+						]
+					}
+				]
+			},
+			"x-last-modified": 1615285187625
+		},
+		"/devices/{deviceId}/channels/{channelId}": {
+			"get": {
+				"tags": [
+					"channel",
+					"device"
+				],
+				"parameters": [
+					{
+						"name": "deviceId",
+						"in": "path",
+						"description": "ID of device to return",
+						"required": true
 					},
-					"security": [
-						 {
-							  "Bearer": [
-									"read:devices",
-									"read:devices/{DEVICEID}",
-									"read:devices/{DEVICEID}/channels",
-									"read:devices/{DEVICEID}/channels/{CHANNELID}"
-							  ]
-						 }
-					]
-			  },
-			  "x-last-modified": 1615285198554
-		 }
+					{
+						"name": "channelId",
+						"in": "path",
+						"description": "ID of channel to return",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of a Channel",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "https://schema.linc.world/draft-01/Channel.json"
+								},
+								"examples": {
+									"Example": {
+										"value": {
+											"id": 15,
+											"sensor": {
+												"type": "https://schema.linc.world/en/st/ac/ct",
+												"model": "https://schema.linc.world/en/sm/ct/1"
+											},
+											"data": [
+												{
+													"phase": "L1",
+													"timestamp": 1615247999,
+													"current": {
+														"crest_factor": 2.02,
+														"rms": 2542,
+														"peak": 5424
+													},
+													"energy": {
+														"active": 381963461
+													},
+													"harmonicValues": [
+														{
+															"bin": 50,
+															"value": 48.98
+														},
+														{
+															"bin": 54,
+															"value": 0.35
+														},
+														{
+															"bin": 58,
+															"value": 0.35
+														},
+														{
+															"bin": 150,
+															"value": 6.38
+														},
+														{
+															"bin": 250,
+															"value": 7.44
+														},
+														{
+															"bin": 350,
+															"value": 9.3
+														},
+														{
+															"bin": 450,
+															"value": 5.93
+														},
+														{
+															"bin": 550,
+															"value": 1.77
+														}
+													],
+													"power": {
+														"apparent": 577,
+														"real": 514
+													},
+													"powerFactor": {
+														"truePowerFactor": "0.890"
+													},
+													"harmonicDistortion": {
+														"totalHarmonicDistortion": "68.90"
+													}
+												}
+											],
+											"metadata": {
+												"name": "Channel 15"
+											},
+											"_links": {
+												"self": {
+													"href": "https://api.linc.world/v2/tools/devices/ZQ/channels/15"
+												},
+												"device": {
+													"href": "https://api.linc.world/v2/tools/devices/ZQ"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"Bearer": [
+							"read:devices",
+							"read:devices/{DEVICEID}",
+							"read:devices/{DEVICEID}/channels",
+							"read:devices/{DEVICEID}/channels/{CHANNELID}"
+						]
+					}
+				]
+			},
+			"x-last-modified": 1615285198554
+		}
 	},
 	"components": {
-		 "securitySchemes": {
-			  "Bearer":{
-				  "type": "http",
-				  "scheme": "bearer"
-			  },
-			  "OpenID": {
-					"flows": {
-						 "authorizationCode": {
-							  "authorizationUrl": "https://accounts.linc.world/v2/authorize",
-							  "tokenUrl": "https://accounts.linc.world/v2/token",
-							  "refreshUrl": "https://accounts.linc.world/v2/refresh",
-							  "scopes": {
-									"profile": "",
-									"read:devices": "Request access to user's devices",
-									"read:devices/{DEVICEID}": "Access specific device",
-									"read:devices/{DEVICEID}/channels": "Access channels of a specific device",
-									"read:devices/{DEVICEID}/channels/{CHANNELID}": "Access specific channel of a device",
-									"read:devices/{DEVICEID}/voltages": "Access voltage lines of a specific device",
-									"read:devices/{DEVICEID}/voltages/{LINEID}": "Access specific voltage line of a device"
-							  }
-						 }
-					},
-					"type": "oauth2",
-					"x-last-modified": 1615282469732
-			  }
-		 }
+		"securitySchemes": {
+			"Bearer": {
+				"type": "http",
+				"scheme": "bearer"
+			},
+			"OpenID": {
+				"flows": {
+					"authorizationCode": {
+						"authorizationUrl": "https://accounts.linc.world/v2/authorize",
+						"tokenUrl": "https://accounts.linc.world/v2/token",
+						"refreshUrl": "https://accounts.linc.world/v2/refresh",
+						"scopes": {
+							"profile": "",
+							"read:devices": "Request access to user's devices",
+							"read:devices/{DEVICEID}": "Access specific device",
+							"read:devices/{DEVICEID}/channels": "Access channels of a specific device",
+							"read:devices/{DEVICEID}/channels/{CHANNELID}": "Access specific channel of a device",
+							"read:devices/{DEVICEID}/voltages": "Access voltage lines of a specific device",
+							"read:devices/{DEVICEID}/voltages/{LINEID}": "Access specific voltage line of a device"
+						}
+					}
+				},
+				"type": "oauth2",
+				"x-last-modified": 1615282469732
+			}
+		}
 	}
 }
